@@ -7,7 +7,7 @@ FROM ubuntu:16.04
 RUN   apt-get update \
  && apt-get install -y build-essential tcl \
  && apt-get install -y redis-server \
-
+ && apt-get install -y --no-install-recommends apt-utils
 
 #Download and Extract the Source Code
   &&  cd /tmp \
