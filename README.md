@@ -11,7 +11,7 @@ RUN   apt-get update \
 
 #Download and Extract the Source Code
   &&  cd /tmp \
-  &&  apt-get install curl  \
+  &&  apt-get install -y curl  \
   &&  curl -O http://download.redis.io/redis-stable.tar.gz  \
   &&  tar xzvf redis-stable.tar.gz  \
    &&  cd redis-stable \
