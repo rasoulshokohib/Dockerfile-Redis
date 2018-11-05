@@ -12,7 +12,7 @@ RUN cd /tmp &&  curl -O http://download.redis.io/redis-stable.tar.gz &&  tar xzv
 #Build and Install Redis
  && make \
  && make test \
- && make install
+ && make install \
     
 #Configure Redis
   &&  sed -i "s/^supervised no/supervised systemd/" /etc/redis/redis.conf  \
