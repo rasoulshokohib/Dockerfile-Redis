@@ -13,13 +13,13 @@ RUN cd /tmp &&  curl -O http://download.redis.io/redis-stable.tar.gz &&  tar xzv
  && make \
  && make test \
  && make install \
-    
+
 #Configure Redis
   &&  sed -i "s/^supervised no/supervised systemd/" /etc/redis/redis.conf  \
   &&  sed -i "s/^dir \.\//dir \/var\/lib\/redis/" /etc/redis/redis.conf  \
   &&  sed -i "s@^# requirepass foobared@requirepass mortezaie1373@"  /etc/redis/redis.conf  \
   &&  service redis-server restart
-  
+
 #Define mountable directories.
   VOLUME ["/data"]
 
